@@ -49,9 +49,9 @@ const ColorGradient = () => {
     useEffect(() => {
         setColorInput({ ...colorInput, color: '#bee6c3' });
         setColorSelect(
-            new Values('#bee6c3').all(Math.round((100 / parseInt(10, 10)) * 2))
+            new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
             );
-    }, []);
+    }, [colorInput]);
 
     return (
         <>
