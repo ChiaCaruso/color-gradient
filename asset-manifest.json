@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/color-gradient/static/css/main.ba7ddb0d.css",
+    "main.js": "/color-gradient/static/js/main.83cfe674.js",
+    "static/js/787.2a098882.chunk.js": "/color-gradient/static/js/787.2a098882.chunk.js",
+    "index.html": "/color-gradient/index.html",
+    "main.ba7ddb0d.css.map": "/color-gradient/static/css/main.ba7ddb0d.css.map",
+    "main.83cfe674.js.map": "/color-gradient/static/js/main.83cfe674.js.map",
+    "787.2a098882.chunk.js.map": "/color-gradient/static/js/787.2a098882.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba7ddb0d.css",
+    "static/js/main.83cfe674.js"
+  ]
+}
