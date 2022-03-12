@@ -16,6 +16,13 @@ const ColorGradient = () => {
         tot: 10,
     });
 
+    useEffect(() => {
+        setColorInput({ ...colorInput, color: '#bee6c3' });
+        setColorSelect(
+            new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
+        );
+    }, []);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -43,13 +50,6 @@ const ColorGradient = () => {
         const { name, value } = e.target;
         setColorInput({ ...colorInput, [name]: value });
     }
-
-    useEffect(() => {
-        setColorInput({ ...colorInput, color: '#bee6c3' });
-        setColorSelect(
-            new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
-        );
-    }, []);
 
     return (
         <>
