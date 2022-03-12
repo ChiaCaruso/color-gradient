@@ -21,7 +21,7 @@ const ColorGradient = () => {
         setColorSelect(
             new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
         );
-    }, []);
+    });
 
 
     const handleSubmit = (e) => {
