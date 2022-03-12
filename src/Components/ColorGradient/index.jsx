@@ -38,9 +38,7 @@ const ColorGradient = () => {
     }
 
     const handleChange = (e) => {
-        if (isError) {
-            setIsError(false);
-        }
+        setIsError(false);
 
         const { name, value } = e.target;
         setColorInput({ ...colorInput, [name]: value });
@@ -50,8 +48,8 @@ const ColorGradient = () => {
         setColorInput({ ...colorInput, color: '#bee6c3' });
         setColorSelect(
             new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
-            );
-    }, [colorInput]);
+        );
+    }, []);
 
     return (
         <>
@@ -85,8 +83,7 @@ const ColorGradient = () => {
                     <h4 className={styles.text_center}>No colors found</h4>
                 ) : !isError && colorSelect ? (
                     colorSelect.map((el) =>
-                        <SingleColor key={uuidv4()} {...el} />
-                    )
+                        <SingleColor key={uuidv4()} {...el} />)
                 ) : (
                     <h4>Loading...</h4>
                 )}
