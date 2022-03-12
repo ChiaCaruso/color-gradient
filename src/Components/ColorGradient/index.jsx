@@ -16,12 +16,13 @@ const ColorGradient = () => {
         tot: 10,
     });
 
-    useEffect(() => {
-        setColorInput({ ...colorInput, color: '#bee6c3' });
-        setColorSelect(
-            new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
-        );
-    });
+
+    const handleChange = (e) => {
+        setIsError(false);
+
+        const { name, value } = e.target;
+        setColorInput({ ...colorInput, [name]: value });
+    }
 
 
     const handleSubmit = (e) => {
@@ -44,12 +45,14 @@ const ColorGradient = () => {
         }
     }
 
-    const handleChange = (e) => {
-        setIsError(false);
+    useEffect(() => {
+        setColorInput({ ...colorInput, color: '#bee6c3' });
+        setColorSelect(
+            new Values('#bee6c3').all(Math.round((100 / parseInt(colorInput.tot, 10)) * 2))
+        );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-        const { name, value } = e.target;
-        setColorInput({ ...colorInput, [name]: value });
-    }
 
     return (
         <>
